@@ -117,6 +117,13 @@ printfn "%A" (f (dsharp.tensor 1.2))
 
 You can specify as many package references as you like in a script.
 
+If you need to reference nuget packages from other nuget sources you can do it with `RestoreSources` option.
+
+```fsharp
+#r "nuget: RestoreSources=https://some-other-nuget-source.org"
+#r "nuget: PackageNameFromOtherNugetSource"
+```
+
 ## Referencing assemblies on disk with F# interactive
 
 Alternatively, if you have an assembly on disk and wish to reference that in a script, you can use the `#r` syntax to specify an assembly. Consider the following code in a project compiled into `MyAssembly.dll`:
